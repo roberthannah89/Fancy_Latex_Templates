@@ -1,0 +1,119 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ~~~ Fancy Math and Theorem-Like Environments ~~~ %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Based on Prof. Wotao Yin's macros
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Math packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Cleveref
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Allows labeled reference. Needs to be in this file for package order reasons. See main template.
+\usepackage[nameinlink]{cleveref}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Macros for math equations environments
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\MyFigure}[1]{../fig/#1}
+
+\newcommand{\bc}{\begin{center}}
+\newcommand{\ec}{\end{center}}
+
+\newcommand{\bdm}{\begin{displaymath}}
+\newcommand{\edm}{\end{displaymath}}
+
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+
+\newcommand{\bfl}{\begin{flushleft}}
+\newcommand{\efl}{\end{flushleft}}
+
+\newcommand{\bt}{\begin{tabbing}}
+\newcommand{\et}{\end{tabbing}}
+
+\newcommand{\beqn}{\begin{align}}
+\newcommand{\eeqn}{\end{align}}
+
+\newcommand{\beqs}{\begin{align*}} % no equation numbers
+\newcommand{\eeqs}{\end{align*}}  % no equation numbers
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Environment for theorem, lemma, etc. (amsthm package)(derived from LyX preamble)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%New plain style. From amsthm plain. 
+%Found at: http://tex.stackexchange.com/questions/17551/amsthm-what-are-the-newtheoremstyle-parameters-for-the-default-styles
+\newtheoremstyle{Fancyplain}
+{\topsep}   
+{\topsep}   
+{\itshape}  
+{0pt}       
+{\bfseries} 
+{}         
+{5pt plus 1pt minus 1pt} 
+{\thmname{#1} \thmnumber{#2}. \thmnote{\normalfont\bfseries#3.}}
+%Format: "Theorem 34. Name of this theorem in bold normal font:"
+
+%Fancyplain environments (same selection as in amsthm)
+\theoremstyle{Fancyplain}
+\newtheorem{thm}{Theorem}
+\newtheorem{lem}{Lemma}
+\newtheorem{cor}[lem]{Corollary}
+\newtheorem{prop}[lem]{Proposition}
+
+%Cleveref names
+\crefname{thm}{Thm.}{Thms.}
+\Crefname{thm}{Theorem}{Theorems}
+\crefname{lem}{Lem.}{Lems.}
+\Crefname{lem}{Lemma}{Lemmas}
+\crefname{cor}{Cor.}{Cors.}
+\Crefname{cor}{Corollary}{Corollaries}
+\crefname{prop}{Prop.}{Props.}
+\Crefname{prop}{Proposition}{Propositions}
+
+%New definition style. From amsthm definition.
+\newtheoremstyle{Fancydefinition}
+{\topsep}   
+{\topsep}   
+{\normalfont}  
+{0pt}       
+{\bfseries} 
+{}         
+{5pt plus 1pt minus 1pt} 
+{\thmname{#1} \thmnumber{#2}. \thmnote{\normalfont\bfseries#3.}}
+%Format: "Definition 34. Name of this definition in bold normal font:"
+
+%Fancydefinition environments (same selection as in amsthm)
+\theoremstyle{Fancydefinition}
+\newtheorem{defn}[lem]{Definition}
+\newtheorem{example}{Example}
+\newtheorem{xca}{Exercise}
+\newtheorem{rem}{Remark}
+\newtheorem{assumption}{Assumption}
+
+%Cleveref names
+\crefname{defn}{Defn.}{Defns.}
+\Crefname{defn}{Definition}{Definitions}
+\crefname{example}{Ex.}{Exs.}
+\Crefname{example}{Example}{Examples}
+\crefname{xca}{Ex.}{Exs.}
+\Crefname{xca}{Exercise}{Exercises}
+\crefname{rem}{Rem.}{Rems.}
+\Crefname{rem}{Remark}{Remarks}
+\crefname{asmp}{Asmp.}{Asmps.}
+\Crefname{asmp}{Assumption}{Assumptions}
+\crefname{section}{Sec.}{Secs.}
+\Crefname{section}{Section}{Sections}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Misc
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
