@@ -225,5 +225,41 @@
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\seqi}[1]{\left(#1^{0},#1^{1},#1^{2},\ldots\right)}
+{\left(#1^{0},#1^{1},#1^{2},\ldots\right)}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\seqf}[2]{\left(#1^{0},#1^{1},#1^{2},\ldots,#1^{#2}\right)}
+{\left(#1^{0},#1^{1},#1^{2},\ldots,#1^{#2}\right)}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\sumi}[1]{\sum_{#1=1}^{\infty}}
+{\sum_{#1=1}^{\infty}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\sumf}[2]{\sum_{#1=1}^{#2}}
+{\sum_{#1=1}^{#2}}
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document
