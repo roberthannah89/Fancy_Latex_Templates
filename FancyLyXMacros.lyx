@@ -92,6 +92,15 @@
 
 \begin_layout Standard
 \begin_inset FormulaMacro
+\newcommand{\abs}[1]{\left|#1\right|}
+{\left|#1\right|}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
 \newcommand{\p}[1]{\left(#1\right)}
 {\left(#1\right)}
 \end_inset
@@ -110,8 +119,8 @@
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\cp}[1]{\mbox{\left\{  #1\right\}  }}
-{\mbox{\left\{  #1\right\}  }}
+\newcommand{\cp}[1]{\text{\left\{  #1\right\}  }}
+{\left\{ #1\right\} }
 \end_inset
 
 
@@ -121,6 +130,15 @@
 \begin_inset FormulaMacro
 \newcommand{\dotp}[1]{\left\langle #1\right\rangle }
 {\left\langle #1\right\rangle }
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\spn}[1]{\text{span}\left\{ #1\right\} }
+{\text{span}\left\{ #1\right\} }
 \end_inset
 
 
@@ -256,6 +274,15 @@
 \begin_inset FormulaMacro
 \newcommand{\sumf}[2]{\sum_{#1=1}^{#2}}
 {\sum_{#1=1}^{#2}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\sumav}[2]{\frac{1}{#2}\sum_{#1=1}^{#2}}
+{\frac{1}{#2}\sum_{#1=1}^{#2}}
 \end_inset
 
 
