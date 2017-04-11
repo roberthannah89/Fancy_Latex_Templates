@@ -137,7 +137,7 @@
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\spn}[1]{\text{span}\left\{ #1\right\} }
+\newcommand{\spn}[1]{\text{span}\left\{  #1\right\}  }
 {\text{span}\left\{ #1\right\} }
 \end_inset
 
@@ -227,6 +227,15 @@
 
 \begin_layout Standard
 \begin_inset FormulaMacro
+\newcommand{\cH}{\mathcal{H}}
+{\mathcal{H}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
 \newcommand{\eps}{\epsilon}
 {\epsilon}
 \end_inset
@@ -238,6 +247,15 @@
 \begin_inset FormulaMacro
 \newcommand{\del}{\delta}
 {\delta}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\gam}{\text{\gamma}}
+{\text{\gamma}}
 \end_inset
 
 
