@@ -1,0 +1,474 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass beamer
+\begin_preamble
+\usetheme{Warsaw}
+% or ...
+
+\setbeamercovered{transparent}
+
+\usepackage{bookmark}
+\bookmarksetup{numbered}
+
+\renewcommand{\arraystretch}{1.2}
+
+
+\allowdisplaybreaks
+\usepackage{algorithm,algpseudocode}
+\usepackage{float}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "times" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command bibtex
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 1
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Fancy LyX Presentation Template
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Short title
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Author
+Robert Rafaeil Hannah
+\begin_inset Flex InstituteMark
+status open
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Institute
+\begin_inset Flex InstituteMark
+status collapsed
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+
+Department of Mathematics
+\begin_inset Newline newline
+\end_inset
+
+University of California, Los Angeles
+\end_layout
+
+\begin_layout Date
+Research Meeting Presentation, March 2017
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "C:/Users/Rober/Google_Drive/Research/Writing/Fancy_LaTeX_Templates/FancyLyXMacros.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Outline
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Finite Sums
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Finite sum optimization is very common in machine learning:
+\begin_inset Formula 
+\begin{align*}
+f\p w & =\sum_{i=1}^{N}f_{i}\p w
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Linear Regression
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{N}\sum_{i=1}^{N}\left|a_{i}\cdot w-b_{i}\right|^{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Logistic Regression
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{N}\sum_{i=1}^{N}\ln\p{1+\exp\p{-y_{i}\p{x_{i}\cdot w}}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Support Vector Machine
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{N}\sum_{i=1}^{N}\max\p{0,1-y_{i}\p{x_{i}\cdot w}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Parameter Server ASAGA
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Parameter Server ASAGA
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Let 
+\begin_inset Formula $i\p k$
+\end_inset
+
+ be an IID and uniform sequence on 
+\begin_inset Formula $\cp{1,2,\ldots,n}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\alpha_{i}^{0}$
+\end_inset
+
+ and 
+\begin_inset Formula $x^{0}$
+\end_inset
+
+ be arbirary vectors for 
+\begin_inset Formula $i=1,2,\ldots,n$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\xh^{k}$
+\end_inset
+
+ be an oudated version of 
+\begin_inset Formula $x^{k}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\gamma\p k$
+\end_inset
+
+ be a sequence of step sizes, and 
+\begin_inset Formula $\nu\p k\in(0,1]$
+\end_inset
+
+ be a relaxation parameter sequence.
+\begin_inset Formula 
+\begin{align*}
+x^{k+1} & =x^{k}-\gamma\p k\sp{\nabla f_{i\p k}\p{\hat{x}^{k}}-\alpha_{i\p k}^{k}+\frac{1}{n}\sum_{i=1}^{n}\alpha_{i}^{k}}\\
+\alpha_{i}^{k+1} & =\begin{cases}
+\alpha_{i}^{k}, & i\neq i\p k\\
+\alpha_{i}^{k}\p{1-\nu\p k}+\nu\p k\nabla f_{i}\p{\hat{x}^{k}}, & i=i\p k
+\end{cases}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Remarks
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Delayed Iterate:
+\series default
+ Many updated may have been made since reading x.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Relaxation parameter:
+\series default
+ Needed for unbounded delay.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Alpha up-to-date:
+\series default
+ Assume updates applied at parameter server.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+References
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "C:/Users/Rober/Google_Drive/Research/Writing/Master_Bibliography/Master_Bibliography"
+options "plain"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
