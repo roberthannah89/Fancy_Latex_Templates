@@ -1,0 +1,128 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ~~~ Robert Hannah's Fancy Beamer Template ~~~ %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Take a look at the article template first. 
+% Some differences:
+% 1) amsthm, hyperref, color are already loaded. So adding options is problematic and can lead to clashes.
+% 2) We have made amthm compatible by getting rid of the example environment
+% 3) We have eliminated the options in geometry for compatiblity
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{beamer}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usetheme{Warsaw}
+\setbeamercovered{transparent}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    ~~~ Fancy Beamer Packages ~~~    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% A useful and fancy collection of Latex packages
+% Describes the function of each package briefly.
+% In the future a separate package file may need to be created because of compatibility issues
+\input{FancyArticlePackages}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%         ~~~ Fancy Macros ~~~         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Based on Prof. Wotao Yin's macros
+\input{FancyMacros}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ~~~ Fancy Math and Theorem-Like Environments ~~~ %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Based on Prof. Wotao Yin's macros
+\input{FancyMathAndTheoremEnvironments}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Document-specific commands:  Packages I wouldn't add to every single document.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% These are commands you wouldn't use in every article, just this article. I've added some packages here that you might want to check out, but haven't included them by default (just commented them).
+
+% Add your content here!
+
+%comment: Comment out sections of code:
+\usepackage{comment}
+
+%add line numbers to text
+%\usepackage[left]{lineno}
+%activate line numbering (line numbers are not shown by default)
+%\linenumbers
+
+%Fancy tooltips: hover over references to display references theorem, equation, etc. (in Adobe Acrobat only!)
+%See http://user.mendelu.cz/marik/fancy-preview/
+%Usage on command line: fancy-preview FILE_NAME --fancy_options="preview,tooltipmark"
+%\usepackage[inactive]{fancytooltips}
+
+%biblatex bibliography
+\bibliography{mybibliography}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Sample bibliography: OMIT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%package to create external files (in this case a .bib file)
+\usepackage{filecontents}
+\begin{filecontents}{mybibliography.bib}
+	@misc{rehfeld,
+		AUTHOR      = "Stephan Rehfeld",
+		TITLE           = "{Digitale Bilder}",
+		HOWPUBLISHED    = "\url{https://public.beuth-hochschule.de/~rehfeld/lehre/2015/ss/digitale-bilder.pdf}",
+		YEAR            = "2015"
+	}   
+\end{filecontents}
+
+%Filler text: Lorem ipsum
+\usepackage{lipsum}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{This Paper is a Template Beamer Presentations}
+
+\author[Abbrev]{Mary Jane, John Doe}
+
+
+\date{\today}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\titlepage
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Table of contents}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tableofcontents
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Motivation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Motivation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+aaaa
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Bibliography}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\nocite{*}
+\printbibliography
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -191,8 +191,26 @@
 
 \begin_layout Standard
 \begin_inset FormulaMacro
+\newcommand{\VV}{\mathbb{V}}
+{\mathbb{V}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
 \newcommand{\CC}{\mathbb{C}}
 {\mathbb{C}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\cD}{\text{\mathcal{D}}}
+{\text{\mathcal{D}}}
 \end_inset
 
 
@@ -229,6 +247,24 @@
 \begin_inset FormulaMacro
 \newcommand{\cH}{\mathcal{H}}
 {\mathcal{H}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\cX}{\text{\mathcal{X}}}
+{\text{\mathcal{X}}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\cY}{\text{\mathcal{Y}}}
+{\text{\mathcal{Y}}}
 \end_inset
 
 
@@ -301,6 +337,24 @@
 \begin_inset FormulaMacro
 \newcommand{\sumav}[2]{\frac{1}{#2}\sum_{#1=1}^{#2}}
 {\frac{1}{#2}\sum_{#1=1}^{#2}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\prodf}[2]{\prod_{#1=1}^{#2}}
+{\prod_{#1=1}^{#2}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\prodi}[1]{\prod_{#1=1}^{\infty}}
+{\prod_{#1=1}^{\infty}}
 \end_inset
 
 
