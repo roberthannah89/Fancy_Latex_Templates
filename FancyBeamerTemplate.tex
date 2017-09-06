@@ -1,15 +1,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % ~~~ Robert Hannah's Fancy Beamer Template ~~~ %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Take a look at the article template first. 
-% Some differences:
-% 1) amsthm, hyperref, color are already loaded. So adding options is problematic and can lead to clashes.
-% 2) We have made amthm compatible by getting rid of the example environment
-% 3) We have eliminated the options in geometry for compatiblity
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\documentclass{beamer}
+\documentclass[english]{beamer}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usetheme{Warsaw}
 \setbeamercovered{transparent}
@@ -20,7 +14,7 @@
 % A useful and fancy collection of Latex packages
 % Describes the function of each package briefly.
 % In the future a separate package file may need to be created because of compatibility issues
-\input{FancyArticlePackages}
+\input{FancyBeamerPackages}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %         ~~~ Fancy Macros ~~~         %
@@ -39,25 +33,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % These are commands you wouldn't use in every article, just this article. I've added some packages here that you might want to check out, but haven't included them by default (just commented them).
 
-% Add your content here!
-
-%comment: Comment out sections of code:
-\usepackage{comment}
-
-%add line numbers to text
-%\usepackage[left]{lineno}
-%activate line numbering (line numbers are not shown by default)
-%\linenumbers
-
-%Fancy tooltips: hover over references to display references theorem, equation, etc. (in Adobe Acrobat only!)
-%See http://user.mendelu.cz/marik/fancy-preview/
-%Usage on command line: fancy-preview FILE_NAME --fancy_options="preview,tooltipmark"
-%\usepackage[inactive]{fancytooltips}
-
 %biblatex bibliography
 \bibliography{mybibliography}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Sample bibliography: OMIT
@@ -73,32 +50,36 @@
 	}   
 \end{filecontents}
 
-%Filler text: Lorem ipsum
-\usepackage{lipsum}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\title{This Paper is a Template Beamer Presentations}
 
-\author[Abbrev]{Mary Jane, John Doe}
+\title[Communication-Avoiding Algorithms]{Fancy Beamer Template}
 
 
-\date{\today}
+\author{Robert Rafaeil Hannah\inst{1}}
+
+
+\institute{\inst{1}Department of Mathematics\\
+University of California, Los Angeles}
+
+\date{Fancy Template Presentation, \today}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}
+\begin{frame}{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \titlepage
-\end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Table of contents}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\tableofcontents
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Outline}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tableofcontents{}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
@@ -109,11 +90,37 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Motivation}
+\begin{frame}{Importance of Avoiding Communication}
+
+\begin{itemize}
+\item \textbf{Costs:} FLOPs, Communication (memmory heirarchy, network)
+\item FLOPs used to be more expensive, now communication cost is (time \&
+energy).
+\item Conventional analysis only cares about FLOPs or convergence rate (decrease
+per iteratate) irrespective of real costs.
+\item Need to consider scaling of FLOPs and communication to create practical
+algorithms.
+\item Potential for massive speedups.
+\item Algorithms in libraries do asymptotically more communication than
+necessary.
+\end{itemize}
+\end{frame}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-aaaa
+\section{Theory}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Some Theory}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Here is some theory.
+
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{References}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Bibliography}

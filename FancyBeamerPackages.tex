@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%    ~~~ Fancy Article Packages ~~~    %
+%    ~~~ Fancy Beamer Packages ~~~     %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % A useful and fancy collection of Latex packages
 % Describes the function of each package briefly.
@@ -45,28 +45,28 @@
 % Miscellaneous:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %authblk: author/affiliation and footnote style authors.
-\usepackage{authblk}
+%\usepackage{authblk}
 
 %Paper size and page margins
 \usepackage{geometry}
 
 %Fancy headers on every page: Section and subsection on left and right respectively
 %Fancy headers on every page: Section and subsection on left and right respectively
-\usepackage{fancyhdr, blindtext}
-\newcommand{\changefont}{\fontsize{7}{9}\selectfont}
-\fancyhf{}
-\fancyhead[R]{\changefont \slshape \rightmark} %section
-\fancyhead[L]{\changefont \slshape \textbf{\leftmark}} %chapter
-\fancyfoot[C]{\changefont \thepage} %footer
-\pagestyle{fancy}
+%\usepackage{fancyhdr, blindtext}
+%\newcommand{\changefont}{\fontsize{7}{9}\selectfont}
+%\fancyhf{}
+%\fancyhead[R]{\changefont \slshape \rightmark} %section
+%\fancyhead[L]{\changefont \slshape \textbf{\leftmark}} %chapter
+%\fancyfoot[C]{\changefont \thepage} %footer
+%\pagestyle{fancy}
 
 %Fixed-length columns with L, C, R alignment.
-\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+%\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+%\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+%\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
 %Todonotes package: Useful for commenting in collaboration
-\usepackage[colorinlistoftodos]{todonotes}
+%\usepackage[colorinlistoftodos]{todonotes}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Referencing and bibliography
@@ -77,11 +77,31 @@
 %url = false: Suppresses URLs for non websites. Doesn't seem to work for arXiv.
 \usepackage[backend=biber,style=ieee]{biblatex}
 
-
 %Hyperref: set up cross reference and citation links
 %Also creates bookmarks for sections, subsections, etc.
 \usepackage{hyperref}
 \hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue,bookmarksnumbered,bookmarksdepth=3}
+
+%Patch to allow bookmark numberings
+\hypersetup{
+  bookmarksnumbered=true
+}
+
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\beamer@section}%
+    {\Hy@writebookmark{\the\c@section}{\secname}}%
+    {\Hy@writebookmark{\the\c@section}{\numberline{\thesection}\secname}}%
+    {}{\errmessage{failed to patch}}
+\patchcmd{\beamer@subsection}%
+    {\Hy@writebookmark{\the\c@subsection}{#2}}%
+    {\Hy@writebookmark{\the\c@subsection}{\numberline{\thesection.\thesubsection}#2}}%
+    {}{\errmessage{failed to patch}}
+\patchcmd{\beamer@subsubsection}%
+    {\Hy@writebookmark{\the\c@subsubsection}{#2}}%
+    {\Hy@writebookmark{\the\c@subsubsection}{\numberline{\thesection.\thesubsection.\thesubsubsection}#2}}%
+    {}{\errmessage{failed to patch}}
+\makeatother
 
 %Cleveref: Allows labeled references. E.g. "Theorem 10" instead of "10".
 %Find this package in the FancyMathAndTheoremEnvironments.tex file. Needs to be here for package ordering reasons.
