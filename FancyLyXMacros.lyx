@@ -128,6 +128,24 @@
 
 \begin_layout Standard
 \begin_inset FormulaMacro
+\newcommand{\floor}[1]{\text{\left\lfloor #1\right\rfloor }}
+{\text{\left\lfloor #1\right\rfloor }}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\ceil}[1]{\text{\left\lceil #1\right\rceil }}
+{\text{\left\lceil #1\right\rceil }}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
 \newcommand{\dotp}[1]{\left\langle #1\right\rangle }
 {\left\langle #1\right\rangle }
 \end_inset

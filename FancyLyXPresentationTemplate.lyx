@@ -348,7 +348,7 @@ Let
 
 .
  Let 
-\begin_inset Formula $\xh^{k}$
+\begin_inset Formula $\hat{x}^{k}$
 \end_inset
 
  be an oudated version of 
@@ -365,6 +365,13 @@ Let
 \end_inset
 
  be a relaxation parameter sequence.
+\begin_inset CommandInset citation
+LatexCommand citet
+key "DefazioBachLacoste-Julien2014_saga"
+
+\end_inset
+
+
 \begin_inset Formula 
 \begin{align*}
 x^{k+1} & =x^{k}-\gamma\p k\sp{\nabla f_{i\p k}\p{\hat{x}^{k}}-\alpha_{i\p k}^{k}+\frac{1}{n}\sum_{i=1}^{n}\alpha_{i}^{k}}\\
