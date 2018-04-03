@@ -164,6 +164,15 @@
 
 \begin_layout Standard
 \begin_inset FormulaMacro
+\newcommand{\f}[2]{\frac{#1}{#2}}
+{\frac{#1}{#2}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
 \newcommand{\RR}{\mathbb{R}}
 {\mathbb{R}}
 \end_inset
@@ -283,6 +292,24 @@
 \begin_inset FormulaMacro
 \newcommand{\cY}{\text{\mathcal{Y}}}
 {\text{\mathcal{Y}}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\alp}{\alpha}
+{\alpha}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\bet}{\beta}
+{\beta}
 \end_inset
 
 
