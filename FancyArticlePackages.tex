@@ -80,8 +80,9 @@
 
 %Hyperref: set up cross reference and citation links
 %Also creates bookmarks for sections, subsections, etc.
+%breaklinks=true: Used to prevent hyperlink-related screw-ups when uploading to arXiv. Links drift out of margins otherwise
 \usepackage{hyperref}
-\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue,bookmarksnumbered,bookmarksdepth=3}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue,bookmarksnumbered,bookmarksdepth=3,breaklinks=true}
 
 %Cleveref: Allows labeled references. E.g. "Theorem 10" instead of "10".
 %Find this package in the FancyMathAndTheoremEnvironments.tex file. Needs to be here for package ordering reasons.
